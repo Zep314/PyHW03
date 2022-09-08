@@ -3,3 +3,17 @@
 
 # Пример:
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
+
+import random
+
+# задаем начальные случайные данные
+maxN = 5
+my_list = [random.randint(0,9) for i in range(0,maxN)]
+# my_list = [2, 3, 5, 9, 3]
+
+def sum_odd(local_list):
+    return sum([local_list[i] for i in range(1,len(local_list),2)]) # тут цикл for с шагом 2
+                                                                    # по нечетный элементам
+print('Начальный список')
+print(my_list)
+print(f'Сумма всех нечетных элементов списка равна {sum_odd(my_list)}')
